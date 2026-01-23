@@ -10,7 +10,7 @@
           "@propagate": true,
           "@protected": true,
           "@version": 1.1,
-          "land-vocab": "https://github.com/chaincodechd/Whatsloan-VC-Schema/blob/main/schemas/land.md#",
+          "land-vocab": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/land.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
           "land_parcel_id": {
             "@id": "land-vocab:land_parcel_id",
@@ -54,7 +54,7 @@
             "@type": "xsd:boolean"
           }
         },
-        "@id": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/main/schemas/json-ld/land-v1.jsonld#Land"
+        "@id": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json-ld/land-v1.jsonld#Land"
       }
     }
   ]

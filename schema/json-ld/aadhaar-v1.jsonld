@@ -10,7 +10,7 @@
           "@propagate": true,
           "@protected": true,
           "@version": 1.1,
-          "aadhaar-vocab": "https://github.com/chaincodechd/Whatsloan-VC-Schema/blob/main/schemas/aadhaar.md#",
+          "aadhaar-vocab": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/aadhaar.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
           "aadhaar_number_hash": {
             "@id": "aadhaar-vocab:aadhaar_number_hash",
@@ -46,7 +46,7 @@
             "@type": "xsd:string"
           }
         },
-        "@id": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/main/schemas/json-ld/aadhaar-v1.jsonld#Aadhaar"
+        "@id": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json-ld/aadhaar-v1.jsonld#Aadhaar"
       }
     }
   ]

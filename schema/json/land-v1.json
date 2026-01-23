@@ -4,8 +4,8 @@
   "description": "Land schema for Farmers",
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/main/schemas/json-ld/land-v1.jsonld",
-      "jsonSchema": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/main/schemas/json/land-v1.json"
+      "jsonLdContext": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json-ld/land-v1.jsonld",
+      "jsonSchema": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json/land-v1.json"
     },
     "version": "1.0",
     "type": "Land"
