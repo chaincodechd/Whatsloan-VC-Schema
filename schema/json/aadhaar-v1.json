@@ -43,12 +43,10 @@
             "dob": {
               "description": "Date of Birth",
               "title": "Date of Birth",
-              "format": "date",
               "type": "string"
             },
             "gender": {
               "description": "Gender",
-              "enum": ["Male", "Female", "Others"],
               "title": "Gender",
               "type": "string"
             },
