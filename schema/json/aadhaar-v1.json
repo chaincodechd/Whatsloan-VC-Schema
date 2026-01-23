@@ -1,0 +1,159 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Aadhaar",
+  "description": "Aadhaar schema for Farmers",
+  "$metadata": {
+    "uris": {
+      "jsonLdContext": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/main/schemas/json-ld/aadhaar-v1.jsonld",
+      "jsonSchema": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/main/schemas/json/aadhaar-v1.json"
+    },
+    "version": "1.0",
+    "type": "Aadhaar"
+  },
+  "properties": {
+    "credentialSubject": {
+      "description": "Stores the data of the credential",
+      "title": "Credential subject",
+      "properties": {
+        "id": {
+          "description": "Stores the DID of the subject that owns the credential",
+          "title": "Credential subject ID",
+          "format": "uri",
+          "type": "string"
+        },
+        "aadhaar_number_hash": {
+          "description": "Hash of the Aadhaar number",
+          "title": "Aadhaar Number Hash",
+          "type": "string"
+        },
+        "personal_details": {
+          "description": "Personal details of the subject",
+          "title": "Personal Details",
+          "type": "object",
+          "properties": {
+            "first_name": {
+              "type": "string"
+            },
+            "last_name": {
+              "type": "string"
+            },
+            "dob": {
+              "type": "string",
+              "format": "date"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "address": {
+              "type": "object"
+            }
+          },
+          "required": ["first_name", "last_name", "dob", "gender", "address"]
+        },
+        "metadata": {
+          "description": "Metadata about the verification",
+          "title": "Metadata",
+          "type": "object",
+          "properties": {
+            "verification_source": {
+              "type": "string"
+            }
+          },
+          "required": ["verification_source"]
+        }
+      },
+      "required": ["aadhaar_number_hash", "personal_details", "metadata"],
+      "type": "object"
+    },
+    "@context": {
+      "type": ["string", "array", "object"]
+    },
+    "expirationDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "issuanceDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "issuer": {
+      "type": ["string", "object"],
+      "format": "uri",
+      "properties": {
+        "id": {
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": ["id"]
+    },
+    "type": {
+      "type": ["string", "array"],
+      "items": {
+        "type": "string"
+      }
+    },
+    "credentialSchema": {
+      "properties": {
+        "id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": ["id", "type"],
+      "type": "object"
+    },
+    "credentialStatus": {
+      "description": "Allows the discovery of information about the current status of the credential, such as whether it is suspended or revoked.",
+      "title": "Credential Status",
+      "properties": {
+        "id": {
+          "description": "Id URL of the credentialStatus.",
+          "title": "Id",
+          "format": "uri",
+          "type": "string"
+        },
+        "type": {
+          "description": "Expresses the credential status type (method). The value should provide enough information to determine the current status of the credential.",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": ["id", "type"],
+      "type": "object"
+    },
+    "subjectPosition": {
+      "type": "string",
+      "enum": ["none", "index", "value"]
+    },
+    "merklizationRootPosition": {
+      "type": "string",
+      "enum": ["none", "index", "value"]
+    },
+    "revNonce": {
+      "type": "integer"
+    },
+    "version": {
+      "type": "integer"
+    },
+    "updatable": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "credentialSubject",
+    "@context",
+    "id",
+    "issuanceDate",
+    "issuer",
+    "type",
+    "credentialSchema"
+  ],
+  "type": "object"
+}

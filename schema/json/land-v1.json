@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Land",
+  "description": "Land schema for Farmers",
+  "$metadata": {
+    "uris": {
+      "jsonLdContext": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/main/schemas/json-ld/land-v1.jsonld",
+      "jsonSchema": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/main/schemas/json/land-v1.json"
+    },
+    "version": "1.0",
+    "type": "Land"
+  },
+  "properties": {
+    "credentialSubject": {
+      "description": "Stores the data of the credential",
+      "title": "Credential subject",
+      "properties": {
+        "id": {
+          "description": "Stores the DID of the subject that owns the credential",
+          "title": "Credential subject ID",
+          "format": "uri",
+          "type": "string"
+        },
+        "land_parcel_id": {
+          "description": "Unique Survey No / ULPIN",
+          "title": "Land Parcel ID",
+          "type": "string"
+        },
+        "ownership_details": {
+          "description": "Details about land ownership",
+          "title": "Ownership Details",
+          "type": "object",
+          "properties": {
+            "owner_name": {
+              "type": "string",
+              "description": "Name on the title deed"
+            },
+            "owner_relation": {
+              "type": "string",
+              "description": "Self / Spouse / Parent"
+            },
+            "share_percentage": {
+              "type": "number",
+              "description": "Ownership share (0-100%)"
+            }
+          },
+          "required": ["owner_name", "owner_relation", "share_percentage"]
+        },
+        "parcel_details": {
+          "description": "Details about the land parcel",
+          "title": "Parcel Details",
+          "type": "object",
+          "properties": {
+            "survey_number": {
+              "type": "string",
+              "description": "Official Survey Number"
+            },
+            "total_area_acres": {
+              "type": "number",
+              "description": "Total area in acres"
+            },
+            "land_type": {
+              "type": "string",
+              "description": "Irrigated / Rainfed / Dry"
+            }
+          },
+          "required": ["survey_number", "total_area_acres", "land_type"]
+        },
+        "legal_status": {
+          "description": "Legal status of the land",
+          "title": "Legal Status",
+          "type": "object",
+          "properties": {
+            "is_disputed": {
+              "type": "boolean",
+              "description": "True if under litigation"
+            }
+          },
+          "required": ["is_disputed"]
+        }
+      },
+      "required": [
+        "land_parcel_id",
+        "ownership_details",
+        "parcel_details",
+        "legal_status"
+      ],
+      "type": "object"
+    },
+    "@context": {
+      "type": ["string", "array", "object"]
+    },
+    "expirationDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "issuanceDate": {
+      "format": "date-time",
+      "type": "string"
+    },
+    "issuer": {
+      "type": ["string", "object"],
+      "format": "uri",
+      "properties": {
+        "id": {
+          "format": "uri",
+          "type": "string"
+        }
+      },
+      "required": ["id"]
+    },
+    "type": {
+      "type": ["string", "array"],
+      "items": {
+        "type": "string"
+      }
+    },
+    "credentialSchema": {
+      "properties": {
+        "id": {
+          "format": "uri",
+          "type": "string"
+        },
+        "type": {
+          "type": "string"
+        }
+      },
+      "required": ["id", "type"],
+      "type": "object"
+    },
+    "credentialStatus": {
+      "description": "Allows the discovery of information about the current status of the credential, such as whether it is suspended or revoked.",
+      "title": "Credential Status",
+      "properties": {
+        "id": {
+          "description": "Id URL of the credentialStatus.",
+          "title": "Id",
+          "format": "uri",
+          "type": "string"
+        },
+        "type": {
+          "description": "Expresses the credential status type (method). The value should provide enough information to determine the current status of the credential.",
+          "title": "Type",
+          "type": "string"
+        }
+      },
+      "required": ["id", "type"],
+      "type": "object"
+    },
+    "subjectPosition": {
+      "type": "string",
+      "enum": ["none", "index", "value"]
+    },
+    "merklizationRootPosition": {
+      "type": "string",
+      "enum": ["none", "index", "value"]
+    },
+    "revNonce": {
+      "type": "integer"
+    },
+    "version": {
+      "type": "integer"
+    },
+    "updatable": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "credentialSubject",
+    "@context",
+    "id",
+    "issuanceDate",
+    "issuer",
+    "type",
+    "credentialSchema"
+  ],
+  "type": "object"
+}

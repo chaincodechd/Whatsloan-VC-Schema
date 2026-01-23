@@ -1,0 +1,53 @@
+{
+  "@context": [
+    {
+      "@protected": true,
+      "@version": 1.1,
+      "id": "@id",
+      "type": "@type",
+      "Aadhaar": {
+        "@context": {
+          "@propagate": true,
+          "@protected": true,
+          "@version": 1.1,
+          "aadhaar-vocab": "https://github.com/chaincodechd/Whatsloan-VC-Schema/blob/main/schemas/aadhaar.md#",
+          "xsd": "http://www.w3.org/2001/XMLSchema#",
+          "aadhaar_number_hash": {
+            "@id": "aadhaar-vocab:aadhaar_number_hash",
+            "@type": "xsd:string"
+          },
+          "personal_details": {
+            "@id": "aadhaar-vocab:personal_details"
+          },
+          "first_name": {
+            "@id": "aadhaar-vocab:first_name",
+            "@type": "xsd:string"
+          },
+          "last_name": {
+            "@id": "aadhaar-vocab:last_name",
+            "@type": "xsd:string"
+          },
+          "dob": {
+            "@id": "aadhaar-vocab:dob",
+            "@type": "xsd:date"
+          },
+          "gender": {
+            "@id": "aadhaar-vocab:gender",
+            "@type": "xsd:string"
+          },
+          "address": {
+            "@id": "aadhaar-vocab:address"
+          },
+          "metadata": {
+            "@id": "aadhaar-vocab:metadata"
+          },
+          "verification_source": {
+            "@id": "aadhaar-vocab:verification_source",
+            "@type": "xsd:string"
+          }
+        },
+        "@id": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/main/schemas/json-ld/aadhaar-v1.jsonld#Aadhaar"
+      }
+    }
+  ]
+}

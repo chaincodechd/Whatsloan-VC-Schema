@@ -1,0 +1,61 @@
+{
+  "@context": [
+    {
+      "@protected": true,
+      "@version": 1.1,
+      "id": "@id",
+      "type": "@type",
+      "Land": {
+        "@context": {
+          "@propagate": true,
+          "@protected": true,
+          "@version": 1.1,
+          "land-vocab": "https://github.com/chaincodechd/Whatsloan-VC-Schema/blob/main/schemas/land.md#",
+          "xsd": "http://www.w3.org/2001/XMLSchema#",
+          "land_parcel_id": {
+            "@id": "land-vocab:land_parcel_id",
+            "@type": "xsd:string"
+          },
+          "ownership_details": {
+            "@id": "land-vocab:ownership_details"
+          },
+          "owner_name": {
+            "@id": "land-vocab:owner_name",
+            "@type": "xsd:string"
+          },
+          "owner_relation": {
+            "@id": "land-vocab:owner_relation",
+            "@type": "xsd:string"
+          },
+          "share_percentage": {
+            "@id": "land-vocab:share_percentage",
+            "@type": "xsd:double"
+          },
+          "parcel_details": {
+            "@id": "land-vocab:parcel_details"
+          },
+          "survey_number": {
+            "@id": "land-vocab:survey_number",
+            "@type": "xsd:string"
+          },
+          "total_area_acres": {
+            "@id": "land-vocab:total_area_acres",
+            "@type": "xsd:double"
+          },
+          "land_type": {
+            "@id": "land-vocab:land_type",
+            "@type": "xsd:string"
+          },
+          "legal_status": {
+            "@id": "land-vocab:legal_status"
+          },
+          "is_disputed": {
+            "@id": "land-vocab:is_disputed",
+            "@type": "xsd:boolean"
+          }
+        },
+        "@id": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/main/schemas/json-ld/land-v1.jsonld#Land"
+      }
+    }
+  ]
+}
