@@ -1,7 +1,4 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Land",
-  "description": "Land schema for Farmers",
   "$metadata": {
     "uris": {
       "jsonLdContext": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json-ld/land-v1.jsonld",
@@ -10,6 +7,9 @@
     "version": "1.0",
     "type": "Land"
   },
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Land schema for Farmers",
+  "title": "Land schema for Farmers",
   "properties": {
     "credentialSubject": {
       "description": "Stores the data of the credential",
@@ -29,54 +29,61 @@
         "ownership_details": {
           "description": "Details about land ownership",
           "title": "Ownership Details",
-          "type": "object",
           "properties": {
             "owner_name": {
-              "type": "string",
-              "description": "Name on the title deed"
+              "description": "Name on the title deed",
+              "title": "Owner Name",
+              "type": "string"
             },
             "owner_relation": {
-              "type": "string",
-              "description": "Self / Spouse / Parent"
+              "description": "Self / Spouse / Parent",
+              "title": "Owner Relation",
+              "type": "string"
             },
             "share_percentage": {
-              "type": "number",
-              "description": "Ownership share (0-100%)"
+              "description": "Ownership share (0-100%)",
+              "title": "Ownership share (0-100%)",
+              "type": "number"
             }
           },
-          "required": ["owner_name", "owner_relation", "share_percentage"]
+          "required": ["owner_name", "owner_relation", "share_percentage"],
+          "type": "object"
         },
         "parcel_details": {
           "description": "Details about the land parcel",
           "title": "Parcel Details",
-          "type": "object",
           "properties": {
             "survey_number": {
-              "type": "string",
-              "description": "Official Survey Number"
+              "description": "Official Survey Number",
+              "title": "Survey Number",
+              "type": "string"
             },
             "total_area_acres": {
-              "type": "number",
-              "description": "Total area in acres"
+              "description": "Total area in acres",
+              "title": "Total Area",
+              "type": "number"
             },
             "land_type": {
-              "type": "string",
-              "description": "Irrigated / Rainfed / Dry"
+              "description": "Irrigated / Rainfed / Dry / Barren",
+              "title": "Land Type",
+              "type": "string"
             }
           },
-          "required": ["survey_number", "total_area_acres", "land_type"]
+          "required": ["survey_number", "total_area_acres", "land_type"],
+          "type": "object"
         },
         "legal_status": {
           "description": "Legal status of the land",
           "title": "Legal Status",
-          "type": "object",
           "properties": {
             "is_disputed": {
-              "type": "boolean",
-              "description": "True if under litigation"
+              "description": "True if under litigation",
+              "title": "Is Disputed",
+              "type": "boolean"
             }
           },
-          "required": ["is_disputed"]
+          "required": ["is_disputed"],
+          "type": "object"
         }
       },
       "required": [
@@ -149,23 +156,6 @@
       },
       "required": ["id", "type"],
       "type": "object"
-    },
-    "subjectPosition": {
-      "type": "string",
-      "enum": ["none", "index", "value"]
-    },
-    "merklizationRootPosition": {
-      "type": "string",
-      "enum": ["none", "index", "value"]
-    },
-    "revNonce": {
-      "type": "integer"
-    },
-    "version": {
-      "type": "integer"
-    },
-    "updatable": {
-      "type": "boolean"
     }
   },
   "required": [
