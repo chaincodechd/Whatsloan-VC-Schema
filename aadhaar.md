@@ -40,11 +40,11 @@ The applicant's last name as per Aadhaar records.
 
 ### personal_details.dob
 
-The applicant's date of birth. The value should follow the ISO 8601 date format (`YYYY-MM-DD`).
+The applicant's date of birth. The value should follow the ISO 8601 date format (`YYYYMMDD`).
 
 ```json
 "personal_details": {
-  "dob": "19850721"
+  "dob": 19850721
 }
 ```
 
