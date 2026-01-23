@@ -27,7 +27,7 @@
               },
               "dob": {
                 "@id": "aadhaar-vocab:personal_details.dob",
-                "@type": "xsd:dateTime"
+                "@type": "xsd:string"
               },
               "gender": {
                 "@id": "aadhaar-vocab:personal_details.gender",
