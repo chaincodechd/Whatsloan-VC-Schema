@@ -27,7 +27,7 @@
               },
               "share_percentage": {
                 "@id": "land-vocab:ownership_details.share_percentage",
-                "@type": "xsd:double"
+                "@type": "xsd:integer"
               }
             },
             "@id": "land-vocab:ownership_details"
@@ -40,7 +40,7 @@
               },
               "total_area_acres": {
                 "@id": "land-vocab:parcel_details.total_area_acres",
-                "@type": "xsd:double"
+                "@type": "xsd:integer"
               },
               "land_type": {
                 "@id": "land-vocab:parcel_details.land_type",

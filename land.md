@@ -40,11 +40,11 @@ The relationship of the owner to the applicant (e.g., Self, Spouse, Parent).
 
 ### ownership_details.share_percentage
 
-The percentage of ownership share held by the individual (0-100%).
+The percentage of ownership share held by the individual (0-100%) (10000).
 
 ```json
 "ownership_details": {
-  "share_percentage": 100.0
+  "share_percentage": 10000
 }
 ```
 
@@ -64,11 +64,11 @@ The official survey number of the land parcel.
 
 ### parcel_details.total_area_acres
 
-The total area of the land parcel in acres.
+The total area of the land parcel in acres (2.5).
 
 ```json
 "parcel_details": {
-  "total_area_acres": 2.5
+  "total_area_acres": 250
 }
 ```
 
