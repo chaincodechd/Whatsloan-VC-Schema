@@ -34,7 +34,37 @@
                 "@type": "xsd:string"
               },
               "address": {
-                "@id": "aadhaar-vocab:personal_details.address"
+                "@id": "aadhaar-vocab:personal_details.address",
+                "@context": {
+                  "address_line_1": {
+                    "@id": "aadhaar-vocab:personal_details.address.address_line_1",
+                    "@type": "xsd:string"
+                  },
+                  "address_line_2": {
+                    "@id": "aadhaar-vocab:personal_details.address.address_line_2",
+                    "@type": "xsd:string"
+                  },
+                  "city": {
+                    "@id": "aadhaar-vocab:personal_details.address.city",
+                    "@type": "xsd:string"
+                  },
+                  "district": {
+                    "@id": "aadhaar-vocab:personal_details.address.district",
+                    "@type": "xsd:string"
+                  },
+                  "state": {
+                    "@id": "aadhaar-vocab:personal_details.address.state",
+                    "@type": "xsd:string"
+                  },
+                  "country": {
+                    "@id": "aadhaar-vocab:personal_details.address.country",
+                    "@type": "xsd:string"
+                  },
+                  "pincode": {
+                    "@id": "aadhaar-vocab:personal_details.address.pincode",
+                    "@type": "xsd:string"
+                  }
+                }
               }
             },
             "@id": "aadhaar-vocab:personal_details"

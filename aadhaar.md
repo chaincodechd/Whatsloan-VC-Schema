@@ -65,11 +65,11 @@ The applicant's gender as recorded in Aadhaar.
 ```json
 "personal_details": {
   "address": {
-    "house": "12-3A",
-    "street": "MG Road",
-    "village": "Rampur",
-    "district": "Varanasi",
+    "address_line_1": "12-3A, MG Road",
+    "address_line_2": "Rampur",
+    "city": "Varanasi",
     "state": "Uttar Pradesh",
+    "country": "India",
     "pincode": "221001"
   }
 }
