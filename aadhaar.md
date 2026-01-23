@@ -44,7 +44,7 @@ The applicant's date of birth. The value should follow the ISO 8601 date format 
 
 ```json
 "personal_details": {
-  "dob": "1985-07-21"
+  "dob": "19850721"
 }
 ```
 
@@ -68,6 +68,7 @@ The applicant's gender as recorded in Aadhaar.
     "address_line_1": "12-3A, MG Road",
     "address_line_2": "Rampur",
     "city": "Varanasi",
+    "district": "Varanasi",
     "state": "Uttar Pradesh",
     "country": "India",
     "pincode": "221001"

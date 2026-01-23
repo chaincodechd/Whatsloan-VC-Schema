@@ -43,7 +43,7 @@
             "dob": {
               "description": "Date of Birth",
               "title": "Date of Birth",
-              "type": "string"
+              "type": "number"
             },
             "gender": {
               "description": "Gender",
