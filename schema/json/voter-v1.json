@@ -1,15 +1,15 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json-ld/aadhaar-v1.jsonld",
-      "jsonSchema": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json/aadhaar-v1.json"
+      "jsonLdContext": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json-ld/voter-v1.jsonld",
+      "jsonSchema": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json/voter-v1.json"
     },
     "version": "1.0",
-    "type": "Aadhaar"
+    "type": "Voter"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "Aadhaar schema for Farmers",
-  "title": "Aadhaar schema for Farmers",
+  "description": "Voter schema for Farmers",
+  "title": "Voter schema for Farmers",
   "properties": {
     "credentialSubject": {
       "description": "Stores the data of the credential",
@@ -21,44 +21,86 @@
           "format": "uri",
           "type": "string"
         },
-        "aadhar_id": {
-          "description": "Hash of the Aadhaar number",
-          "title": "Aadhaar ID",
+        "voter_number": {
+          "description": "Voter ID Number",
+          "title": "Voter Number",
           "type": "string"
         },
-        "aadhaar_name": {
-          "description": "Name as per Aadhaar records",
-          "title": "Aadhaar Name",
+        "epic_number": {
+          "description": "Electoral Photo Identity Card Number",
+          "title": "EPIC Number",
           "type": "string"
         },
-        "gender": {
-          "description": "Gender as per Aadhaar records",
-          "title": "Gender",
+        "voter_name": {
+          "description": "Name as per Voter ID records",
+          "title": "Voter Name",
           "type": "string"
         },
-        "father_or_husband_name": {
-          "description": "Father's or Husband's Name as per Aadhaar records",
-          "title": "Father / Husband Name",
-          "type": "string"
+        "age": {
+          "description": "Age as per Voter ID records",
+          "title": "Age",
+          "type": "number"
         },
         "date_of_birth": {
-          "description": "Date of Birth in YYYYMMDD format",
+          "description": "Date of Birth in YYYYMMDD format as per Voter ID records",
           "title": "Date of Birth",
           "type": "number"
         },
-        "address": {
-          "description": "Full address as a plain string text",
-          "title": "Address",
-          "type": "object"
+        "gender": {
+          "description": "Gender as per Voter ID records",
+          "title": "Gender",
+          "type": "string"
+        },
+        "relative_name": {
+          "description": "Father's/Mother's/Husband's Name as per Voter ID records",
+          "title": "Relative Name",
+          "type": "string"
+        },
+        "house_no": {
+          "description": "House Number as per Voter ID records",
+          "title": "House No",
+          "type": "string"
+        },
+        "polling_station": {
+          "description": "Polling Station as per Voter ID records",
+          "title": "Polling Station",
+          "type": "string"
+        },
+        "police_station": {
+          "description": "Police Station as per Voter ID records",
+          "title": "Police Station",
+          "type": "string"
+        },
+        "constituency": {
+          "description": "Constituency as per Voter ID records",
+          "title": "Constituency",
+          "type": "string"
+        },
+        "district": {
+          "description": "District as per Voter ID records",
+          "title": "District",
+          "type": "string"
+        },
+        "state": {
+          "description": "State as per Voter ID records",
+          "title": "State",
+          "type": "string"
         }
       },
       "required": [
-        "aadhar_id",
-        "aadhaar_name",
-        "gender",
-        "father_or_husband_name",
+        "voter_number",
+        "epic_number",
+        "voter_name",
+        "age",
         "date_of_birth",
-        "address"
+        "gender",
+        "relative_name",
+        "house_no",
+        "polling_station",
+        "police_station",
+        "constituency",
+        "district",
+        "state"
       ],
       "type": "object"
     },

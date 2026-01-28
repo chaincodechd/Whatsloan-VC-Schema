@@ -1,15 +1,15 @@
 {
   "$metadata": {
     "uris": {
-      "jsonLdContext": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json-ld/aadhaar-v1.jsonld",
-      "jsonSchema": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json/aadhaar-v1.json"
+      "jsonLdContext": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json-ld/pan-v1.jsonld",
+      "jsonSchema": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json/pan-v1.json"
     },
     "version": "1.0",
-    "type": "Aadhaar"
+    "type": "PAN"
   },
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "description": "Aadhaar schema for Farmers",
-  "title": "Aadhaar schema for Farmers",
+  "description": "PAN schema for Farmers",
+  "title": "PAN schema for Farmers",
   "properties": {
     "credentialSubject": {
       "description": "Stores the data of the credential",
@@ -21,44 +21,34 @@
           "format": "uri",
           "type": "string"
         },
-        "aadhar_id": {
-          "description": "Hash of the Aadhaar number",
-          "title": "Aadhaar ID",
+        "pan_number": {
+          "description": "Permanent Account Number",
+          "title": "PAN Number",
           "type": "string"
         },
-        "aadhaar_name": {
-          "description": "Name as per Aadhaar records",
-          "title": "Aadhaar Name",
-          "type": "string"
-        },
-        "gender": {
-          "description": "Gender as per Aadhaar records",
-          "title": "Gender",
-          "type": "string"
-        },
-        "father_or_husband_name": {
-          "description": "Father's or Husband's Name as per Aadhaar records",
-          "title": "Father / Husband Name",
+        "pan_name": {
+          "description": "Name as per PAN records",
+          "title": "PAN Name",
           "type": "string"
         },
         "date_of_birth": {
-          "description": "Date of Birth in YYYYMMDD format",
+          "description": "Date of Birth in YYYYMMDD format as per PAN records",
           "title": "Date of Birth",
           "type": "number"
         },
-        "address": {
-          "description": "Full address as a plain string text",
-          "title": "Address",
-          "type": "object"
+        "name_match_percentage": {
+          "description": "Percentage indicating the match between provided name and PAN name (0-100)",
+          "title": "Name Match Percentage",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10000
         }
       },
       "required": [
-        "aadhar_id",
-        "aadhaar_name",
-        "gender",
-        "father_or_husband_name",
+        "pan_number",
+        "pan_name",
         "date_of_birth",
-        "address"
+        "name_match_percentage"
       ],
       "type": "object"
     },

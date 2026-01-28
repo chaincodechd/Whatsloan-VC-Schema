@@ -1,0 +1,35 @@
+{
+  "@context": [
+    {
+      "@protected": true,
+      "@version": 1.1,
+      "id": "@id",
+      "type": "@type",
+      "PAN": {
+        "@context": {
+          "@propagate": true,
+          "@protected": true,
+          "pan-vocab": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/pan.md#",
+          "xsd": "http://www.w3.org/2001/XMLSchema#",
+          "pan_number": {
+            "@id": "pan-vocab:pan_number",
+            "@type": "xsd:string"
+          },
+          "pan_name": {
+            "@id": "pan-vocab:pan_name",
+            "@type": "xsd:string"
+          },
+          "date_of_birth": {
+            "@id": "pan-vocab:date_of_birth",
+            "@type": "xsd:integer"
+          },
+          "name_match_percentage": {
+            "@id": "pan-vocab:name_match_percentage",
+            "@type": "xsd:integer"
+          }
+        },
+        "@id": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json-ld/pan-v1.jsonld#PAN"
+      }
+    }
+  ]
+}

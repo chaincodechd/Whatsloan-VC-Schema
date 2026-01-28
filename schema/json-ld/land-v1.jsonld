@@ -11,52 +11,73 @@
           "@protected": true,
           "land-vocab": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/land.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
-          "land_parcel_id": {
-            "@id": "land-vocab:land_parcel_id",
+          "state_name": {
+            "@id": "land-vocab:state_name",
             "@type": "xsd:string"
           },
-          "ownership_details": {
-            "@context": {
-              "owner_name": {
-                "@id": "land-vocab:ownership_details.owner_name",
-                "@type": "xsd:string"
-              },
-              "owner_relation": {
-                "@id": "land-vocab:ownership_details.owner_relation",
-                "@type": "xsd:string"
-              },
-              "share_percentage": {
-                "@id": "land-vocab:ownership_details.share_percentage",
-                "@type": "xsd:integer"
-              }
-            },
-            "@id": "land-vocab:ownership_details"
+          "state_id": {
+            "@id": "land-vocab:state_id",
+            "@type": "xsd:string"
           },
-          "parcel_details": {
-            "@context": {
-              "survey_number": {
-                "@id": "land-vocab:parcel_details.survey_number",
-                "@type": "xsd:string"
-              },
-              "total_area_acres": {
-                "@id": "land-vocab:parcel_details.total_area_acres",
-                "@type": "xsd:integer"
-              },
-              "land_type": {
-                "@id": "land-vocab:parcel_details.land_type",
-                "@type": "xsd:string"
-              }
-            },
-            "@id": "land-vocab:parcel_details"
+          "district_name": {
+            "@id": "land-vocab:district_name",
+            "@type": "xsd:string"
           },
-          "legal_status": {
-            "@context": {
-              "is_disputed": {
-                "@id": "land-vocab:legal_status.is_disputed",
-                "@type": "xsd:boolean"
-              }
-            },
-            "@id": "land-vocab:legal_status"
+          "district_id": {
+            "@id": "land-vocab:district_id",
+            "@type": "xsd:string"
+          },
+          "tehsil_name": {
+            "@id": "land-vocab:tehsil_name",
+            "@type": "xsd:string"
+          },
+          "tehsil_id": {
+            "@id": "land-vocab:tehsil_id",
+            "@type": "xsd:string"
+          },
+          "village_name": {
+            "@id": "land-vocab:village_name",
+            "@type": "xsd:string"
+          },
+          "village_id": {
+            "@id": "land-vocab:village_id",
+            "@type": "xsd:string"
+          },
+          "survey_number": {
+            "@id": "land-vocab:survey_number",
+            "@type": "xsd:string"
+          },
+          "sub_survey_number": {
+            "@id": "land-vocab:sub_survey_number",
+            "@type": "xsd:string"
+          },
+          "land_owner_name": {
+            "@id": "land-vocab:land_owner_name",
+            "@type": "xsd:string"
+          },
+          "ownership_type": {
+            "@id": "land-vocab:ownership_type",
+            "@type": "xsd:string"
+          },
+          "owner_share": {
+            "@id": "land-vocab:owner_share",
+            "@type": "xsd:integer"
+          },
+          "irrigation_status": {
+            "@id": "land-vocab:irrigation_status",
+            "@type": "xsd:boolean"
+          },
+          "mortgage_status": {
+            "@id": "land-vocab:mortgage_status",
+            "@type": "xsd:boolean"
+          },
+          "court_case": {
+            "@id": "land-vocab:court_case",
+            "@type": "xsd:boolean"
+          },
+          "land_area": {
+            "@id": "land-vocab:land_area",
+            "@type": "xsd:integer"
           }
         },
         "@id": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json-ld/land-v1.jsonld#Land"

@@ -11,72 +11,29 @@
           "@protected": true,
           "aadhaar-vocab": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/aadhaar.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
-          "aadhaar_number_hash": {
-            "@id": "aadhaar-vocab:aadhaar_number_hash",
+          "aadhar_id": {
+            "@id": "aadhaar-vocab:aadhar_id",
             "@type": "xsd:string"
           },
-          "personal_details": {
-            "@context": {
-              "first_name": {
-                "@id": "aadhaar-vocab:personal_details.first_name",
-                "@type": "xsd:string"
-              },
-              "last_name": {
-                "@id": "aadhaar-vocab:personal_details.last_name",
-                "@type": "xsd:string"
-              },
-              "dob": {
-                "@id": "aadhaar-vocab:personal_details.dob",
-                "@type": "xsd:integer"
-              },
-              "gender": {
-                "@id": "aadhaar-vocab:personal_details.gender",
-                "@type": "xsd:string"
-              },
-              "address": {
-                "@id": "aadhaar-vocab:personal_details.address",
-                "@context": {
-                  "address_line_1": {
-                    "@id": "aadhaar-vocab:personal_details.address.address_line_1",
-                    "@type": "xsd:string"
-                  },
-                  "address_line_2": {
-                    "@id": "aadhaar-vocab:personal_details.address.address_line_2",
-                    "@type": "xsd:string"
-                  },
-                  "city": {
-                    "@id": "aadhaar-vocab:personal_details.address.city",
-                    "@type": "xsd:string"
-                  },
-                  "district": {
-                    "@id": "aadhaar-vocab:personal_details.address.district",
-                    "@type": "xsd:string"
-                  },
-                  "state": {
-                    "@id": "aadhaar-vocab:personal_details.address.state",
-                    "@type": "xsd:string"
-                  },
-                  "country": {
-                    "@id": "aadhaar-vocab:personal_details.address.country",
-                    "@type": "xsd:string"
-                  },
-                  "pincode": {
-                    "@id": "aadhaar-vocab:personal_details.address.pincode",
-                    "@type": "xsd:string"
-                  }
-                }
-              }
-            },
-            "@id": "aadhaar-vocab:personal_details"
+          "aadhaar_name": {
+            "@id": "aadhaar-vocab:aadhaar_name",
+            "@type": "xsd:string"
           },
-          "metadata": {
-            "@context": {
-              "verification_source": {
-                "@id": "aadhaar-vocab:metadata.verification_source",
-                "@type": "xsd:string"
-              }
-            },
-            "@id": "aadhaar-vocab:metadata"
+          "gender": {
+            "@id": "aadhaar-vocab:gender",
+            "@type": "xsd:string"
+          },
+          "father_or_husband_name": {
+            "@id": "aadhaar-vocab:father_or_husband_name",
+            "@type": "xsd:string"
+          },
+          "date_of_birth": {
+            "@id": "aadhaar-vocab:date_of_birth",
+            "@type": "xsd:integer"
+          },
+          "address": {
+            "@id": "aadhaar-vocab:address",
+            "@type": "xsd:string"
           }
         },
         "@id": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json-ld/aadhaar-v1.jsonld#Aadhaar"

@@ -6,92 +6,138 @@ This document describes the Land schema used for verifying land ownership and pa
 
 ---
 
-## land_parcel_id
+## state_name
 
-`land_parcel_id` represents the Unique Survey Number or ULPIN (Unique Land Parcel Identification Number).
+`state_name` represents the name of the state where the land is located.
 
 ```json
-"land_parcel_id": "ULPIN123456"
+"state_name": "Uttar Pradesh"
 ```
 
-## ownership_details
+## state_id
 
-`ownership_details` contains information about the owner of the land.
-
-### ownership_details.owner_name
-
-The name of the owner as it appears on the title deed.
+`state_id` represents the unique identifier for the state.
 
 ```json
-"ownership_details": {
-  "owner_name": "Ramesh Kumar"
-}
+"state_id": 9
 ```
 
-### ownership_details.owner_relation
+## district_name
 
-The relationship of the owner to the applicant (e.g., Self, Spouse, Parent).
+`district_name` represents the name of the district where the land is located.
 
 ```json
-"ownership_details": {
-  "owner_relation": "Self"
-}
+"district_name": "Varanasi"
 ```
 
-### ownership_details.share_percentage
+## district_id
 
-The percentage of ownership share held by the individual (0-100%) (10000).
+`district_id` represents the unique identifier for the district.
 
 ```json
-"ownership_details": {
-  "share_percentage": 10000
-}
+"district_id": 123
 ```
 
-## parcel_details
+## tehsil_name
 
-`parcel_details` contains specific details about the land parcel.
-
-### parcel_details.survey_number
-
-The official survey number of the land parcel.
+`tehsil_name` represents the name of the tehsil (sub-district) where the land is located.
 
 ```json
-"parcel_details": {
-  "survey_number": "123/A"
-}
+"tehsil_name": "Sadar"
 ```
 
-### parcel_details.total_area_acres
+## tehsil_id
 
-The total area of the land parcel in acres (2.5).
+`tehsil_id` represents the unique identifier for the tehsil.
 
 ```json
-"parcel_details": {
-  "total_area_acres": 250
-}
+"tehsil_id": 456
 ```
 
-### parcel_details.land_type
+## village_name
 
-The type of land (e.g., Irrigated, Rainfed, Dry).
+`village_name` represents the name of the village where the land is located.
 
 ```json
-"parcel_details": {
-  "land_type": "Irrigated"
-}
+"village_name": "Rampur"
 ```
 
-## legal_status
+## village_id
 
-`legal_status` contains information regarding the legal standing of the land.
-
-### legal_status.is_disputed
-
-Indicates whether the land is currently under litigation or dispute.
+`village_id` represents the unique identifier for the village.
 
 ```json
-"legal_status": {
-  "is_disputed": false
-}
+"village_id": 789
+```
+
+## survey_number
+
+`survey_number` represents the official survey number of the land parcel.
+
+```json
+"survey_number": "123/A"
+```
+
+## sub_survey_number
+
+`sub_survey_number` represents the sub-survey number of the land parcel, if applicable.
+
+```json
+"sub_survey_number": "1"
+```
+
+## land_owner_name
+
+`land_owner_name` represents the name of the land owner as per official records.
+
+```json
+"land_owner_name": "Ramesh Kumar"
+```
+
+## ownership_type
+
+`ownership_type` describes the type of ownership (e.g., "Sole", "Joint", "Ancestral").
+
+```json
+"ownership_type": "Sole"
+```
+
+## owner_share
+
+`owner_share` represents the percentage of ownership share held by the individual (e.g., 100 for 100%).
+
+```json
+"owner_share": 100
+```
+
+## irrigation_status
+
+`irrigation_status` indicates the irrigation status of the land (e.g., "Irrigated", "Rainfed", "Dry").
+
+```json
+"irrigation_status": "Irrigated"
+```
+
+## mortgage_status
+
+`mortgage_status` indicates whether the land is currently mortgaged (`true` or `false`).
+
+```json
+"mortgage_status": false
+```
+
+## court_case
+
+`court_case` indicates whether the land is currently involved in a court case or dispute (`true` or `false`).
+
+```json
+"court_case": false
+```
+
+## land_area
+
+`land_area` represents the total area of the land parcel in a specified unit (e.g., acres, hectares).
+
+```json
+"land_area": 2.5
 ```

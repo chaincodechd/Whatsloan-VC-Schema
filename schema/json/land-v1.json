@@ -21,76 +21,112 @@
           "format": "uri",
           "type": "string"
         },
-        "land_parcel_id": {
-          "description": "Unique Survey No / ULPIN",
-          "title": "Land Parcel ID",
+        "state_name": {
+          "description": "Name of the state where the land is located.",
+          "title": "State Name",
           "type": "string"
         },
-        "ownership_details": {
-          "description": "Details about land ownership",
-          "title": "Ownership Details",
-          "properties": {
-            "owner_name": {
-              "description": "Name on the title deed",
-              "title": "Owner Name",
-              "type": "string"
-            },
-            "owner_relation": {
-              "description": "Self / Spouse / Parent",
-              "title": "Owner Relation",
-              "type": "string"
-            },
-            "share_percentage": {
-              "description": "Ownership share (0-100%)",
-              "title": "Ownership share (0-100%)",
-              "type": "number"
-            }
-          },
-          "required": ["owner_name", "owner_relation", "share_percentage"],
-          "type": "object"
+        "state_id": {
+          "description": "Unique identifier for the state.",
+          "title": "State ID",
+          "type": "string"
         },
-        "parcel_details": {
-          "description": "Details about the land parcel",
-          "title": "Parcel Details",
-          "properties": {
-            "survey_number": {
-              "description": "Official Survey Number",
-              "title": "Survey Number",
-              "type": "string"
-            },
-            "total_area_acres": {
-              "description": "Total area in acres",
-              "title": "Total Area",
-              "type": "number"
-            },
-            "land_type": {
-              "description": "Irrigated / Rainfed / Dry / Barren",
-              "title": "Land Type",
-              "type": "string"
-            }
-          },
-          "required": ["survey_number", "total_area_acres", "land_type"],
-          "type": "object"
+        "district_name": {
+          "description": "Name of the district where the land is located.",
+          "title": "District Name",
+          "type": "string"
         },
-        "legal_status": {
-          "description": "Legal status of the land",
-          "title": "Legal Status",
-          "properties": {
-            "is_disputed": {
-              "description": "True if under litigation",
-              "title": "Is Disputed",
-              "type": "boolean"
-            }
-          },
-          "required": ["is_disputed"],
-          "type": "object"
+        "district_id": {
+          "description": "Unique identifier for the district.",
+          "title": "District ID",
+          "type": "string"
+        },
+        "tehsil_name": {
+          "description": "Name of the tehsil (sub-district) where the land is located.",
+          "title": "Tehsil Name",
+          "type": "string"
+        },
+        "tehsil_id": {
+          "description": "Unique identifier for the tehsil.",
+          "title": "Tehsil ID",
+          "type": "string"
+        },
+        "village_name": {
+          "description": "Name of the village where the land is located.",
+          "title": "Village Name",
+          "type": "string"
+        },
+        "village_id": {
+          "description": "Unique identifier for the village.",
+          "title": "Village ID",
+          "type": "string"
+        },
+        "survey_number": {
+          "description": "Official survey number of the land parcel.",
+          "title": "Survey Number",
+          "type": "string"
+        },
+        "sub_survey_number": {
+          "description": "Sub-survey number of the land parcel, if applicable.",
+          "title": "Sub Survey Number",
+          "type": "string"
+        },
+        "land_owner_name": {
+          "description": "Name of the land owner as per official records.",
+          "title": "Land Owner Name",
+          "type": "string"
+        },
+        "ownership_type": {
+          "description": "Type of ownership (e.g., Sole, Joint, Ancestral).",
+          "title": "Ownership Type",
+          "type": "string"
+        },
+        "owner_share": {
+          "description": "Percentage of ownership share held by the individual (e.g., 100 for 100%).",
+          "title": "Owner Share",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10000
+        },
+        "irrigation_status": {
+          "description": "Irrigation status of the land (e.g., Irrigated, Rainfed, Dry).",
+          "title": "Irrigation Status",
+          "type": "boolean"
+        },
+        "mortgage_status": {
+          "description": "Indicates whether the land is currently mortgaged.",
+          "title": "Mortgage Status",
+          "type": "boolean"
+        },
+        "court_case": {
+          "description": "Indicates whether the land is currently involved in a court case or dispute.",
+          "title": "Court Case",
+          "type": "boolean"
+        },
+        "land_area": {
+          "description": "Total area of the land parcel (e.g., in acres, hectares).",
+          "title": "Land Area",
+          "type": "number"
         }
       },
       "required": [
-        "land_parcel_id",
-        "ownership_details",
-        "parcel_details",
-        "legal_status"
+        "state_name",
+        "state_id",
+        "district_name",
+        "district_id",
+        "tehsil_name",
+        "tehsil_id",
+        "village_name",
+        "village_id",
+        "survey_number",
+        "sub_survey_number",
+        "land_owner_name",
+        "ownership_type",
+        "owner_share",
+        "irrigation_status",
+        "mortgage_status",
+        "court_case",
+        "land_area"
       ],
       "type": "object"
     },

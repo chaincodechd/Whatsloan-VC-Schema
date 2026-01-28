@@ -1,0 +1,71 @@
+{
+  "@context": [
+    {
+      "@protected": true,
+      "@version": 1.1,
+      "id": "@id",
+      "type": "@type",
+      "Voter": {
+        "@context": {
+          "@propagate": true,
+          "@protected": true,
+          "voter-vocab": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/voter.md#",
+          "xsd": "http://www.w3.org/2001/XMLSchema#",
+          "voter_number": {
+            "@id": "voter-vocab:voter_number",
+            "@type": "xsd:string"
+          },
+          "epic_number": {
+            "@id": "voter-vocab:epic_number",
+            "@type": "xsd:string"
+          },
+          "voter_name": {
+            "@id": "voter-vocab:voter_name",
+            "@type": "xsd:string"
+          },
+          "age": {
+            "@id": "voter-vocab:age",
+            "@type": "xsd:integer"
+          },
+          "date_of_birth": {
+            "@id": "voter-vocab:date_of_birth",
+            "@type": "xsd:integer"
+          },
+          "gender": {
+            "@id": "voter-vocab:gender",
+            "@type": "xsd:string"
+          },
+          "relative_name": {
+            "@id": "voter-vocab:relative_name",
+            "@type": "xsd:string"
+          },
+          "house_no": {
+            "@id": "voter-vocab:house_no",
+            "@type": "xsd:string"
+          },
+          "polling_station": {
+            "@id": "voter-vocab:polling_station",
+            "@type": "xsd:string"
+          },
+          "police_station": {
+            "@id": "voter-vocab:police_station",
+            "@type": "xsd:string"
+          },
+          "constituency": {
+            "@id": "voter-vocab:constituency",
+            "@type": "xsd:string"
+          },
+          "district": {
+            "@id": "voter-vocab:district",
+            "@type": "xsd:string"
+          },
+          "state": {
+            "@id": "voter-vocab:state",
+            "@type": "xsd:string"
+          }
+        },
+        "@id": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json-ld/voter-v1.jsonld#Voter"
+      }
+    }
+  ]
+}

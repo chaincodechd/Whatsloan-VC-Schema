@@ -6,94 +6,50 @@ This document describes the Aadhaar-related schema used for farmer identificatio
 
 ---
 
-## aadhaar_number_hash
+## aadhar_id
 
-`aadhaar_number_hash` represents the hashed value of the Aadhaar number. The original Aadhaar number must never be stored or transmitted in plain text.
+`aadhar_id` represents the hashed value of the Aadhaar number. The original Aadhaar number must never be stored or transmitted in plain text.
 
 ```json
-"aadhaar_number_hash": "e3b0c44298fc1c149afbf4c8996fb924a27ae41e4649b934ca495991b7852b855"
+"aadhar_id": "e3b0c44298fc1c149afbf4c8996fb924a27ae41e4649b934ca495991b7852b855"
 ```
 
-## personal_details
+## aadhaar_name
 
-`personal_details` contains basic demographic information of the applicant obtained during Aadhaar-based verification.
-
-### personal_details.first_name
-
-The applicant's first name as per Aadhaar records.
+`aadhaar_name` is the full name of the applicant as per Aadhaar records.
 
 ```json
-"personal_details": {
-  "first_name": "Ramesh"
-}
+"aadhaar_name": "Ramesh Kumar"
 ```
 
-### personal_details.last_name
+## gender
 
-The applicant's last name as per Aadhaar records.
+`gender` is the applicant's gender as recorded in Aadhaar.
 
 ```json
-"personal_details": {
-  "last_name": "Kumar"
-}
+"gender": "Male"
 ```
 
-### personal_details.dob
+## father_or_husband_name
 
-The applicant's date of birth. The value should follow the ISO 8601 date format (`YYYYMMDD`).
+`father_or_husband_name` is the name of the applicant's father or husband as per Aadhaar records.
 
 ```json
-"personal_details": {
-  "dob": 19850721
-}
+"father_or_husband_name": "Suresh Kumar"
 ```
 
-### personal_details.gender
+## date_of_birth
 
-The applicant's gender as recorded in Aadhaar.
+`date_of_birth` is the applicant's date of birth. The value should follow the ISO 8601 date format (`YYYYMMDD`).
 
 ```json
-"personal_details": {
-  "gender": "Male"
-}
+"date_of_birth": 19850721
 ```
 
-### personal_details.address
+## address
 
-`address` is an object containing the applicant's address details as per Aadhaar records.
-
-```json
-"personal_details": {
-  "address": {
-    "address_line_1": "12-3A, MG Road",
-    "address_line_2": "Rampur",
-    "city": "Varanasi",
-    "district": "Varanasi",
-    "state": "Uttar Pradesh",
-    "country": "India",
-    "pincode": "221001"
-  }
-}
-```
-
----
-
-## metadata
-
-`metadata` contains system-level information related to Aadhaar verification.
-
-### metadata.verification_source
-
-Indicates the source or mechanism used to perform Aadhaar verification.
-
-Example values include:
-
-- `UIDAI`
-- `Offline eKYC`
-- `Registered Authentication Service Provider`
+`address` is the full address of the applicant as a plain string text, as per Aadhaar records.
 
 ```json
-"metadata": {
-  "verification_source": "UIDAI"
-}
+"address": "12-3A, MG Road, Rampur, Varanasi, Uttar Pradesh, India, 221001"
 ```
