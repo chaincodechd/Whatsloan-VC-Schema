@@ -11,8 +11,8 @@
           "@protected": true,
           "aadhaar-vocab": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/aadhaar.md#",
           "xsd": "http://www.w3.org/2001/XMLSchema#",
-          "aadhar_id": {
-            "@id": "aadhaar-vocab:aadhar_id",
+          "aadhaar_id": {
+            "@id": "aadhaar-vocab:aadhaar_id",
             "@type": "xsd:string"
           },
           "aadhaar_name": {

@@ -21,7 +21,7 @@
           "format": "uri",
           "type": "string"
         },
-        "aadhar_id": {
+        "aadhaar_id": {
           "description": "Hash of the Aadhaar number",
           "title": "Aadhaar ID",
           "type": "string"
@@ -53,7 +53,7 @@
         }
       },
       "required": [
-        "aadhar_id",
+        "aadhaar_id",
         "aadhaar_name",
         "gender",
         "father_or_husband_name",

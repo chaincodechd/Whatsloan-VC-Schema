@@ -6,12 +6,12 @@ This document describes the Aadhaar-related schema used for farmer identificatio
 
 ---
 
-## aadhar_id
+## aadhaar_id
 
-`aadhar_id` represents the hashed value of the Aadhaar number. The original Aadhaar number must never be stored or transmitted in plain text.
+`aadhaar_id` represents the hashed value of the Aadhaar number. The original Aadhaar number must never be stored or transmitted in plain text.
 
 ```json
-"aadhar_id": "e3b0c44298fc1c149afbf4c8996fb924a27ae41e4649b934ca495991b7852b855"
+"aadhaar_id": "e3b0c44298fc1c149afbf4c8996fb924a27ae41e4649b934ca495991b7852b855"
 ```
 
 ## aadhaar_name
