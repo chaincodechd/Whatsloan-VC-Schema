@@ -49,7 +49,7 @@
         "address": {
           "description": "Full address as a plain string text",
           "title": "Address",
-          "type": "object"
+          "type": "string"
         }
       },
       "required": [
