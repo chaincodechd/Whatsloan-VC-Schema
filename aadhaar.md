@@ -53,3 +53,11 @@ This document describes the Aadhaar-related schema used for farmer identificatio
 ```json
 "address": "12-3A, MG Road, Rampur, Varanasi, Uttar Pradesh, India, 221001"
 ```
+
+## name_match_percentage
+
+`name_match_percentage` indicates the percentage match between a provided name and the name on the PAN card.
+
+```json
+"name_match_percentage": 95
+```

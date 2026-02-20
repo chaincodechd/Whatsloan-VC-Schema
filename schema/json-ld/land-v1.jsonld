@@ -78,6 +78,10 @@
           "land_area": {
             "@id": "land-vocab:land_area",
             "@type": "xsd:integer"
+          },
+          "name_match_percentage": {
+            "@id": "land-vocab:name_match_percentage",
+            "@type": "xsd:integer"
           }
         },
         "@id": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json-ld/land-v1.jsonld#Land"

@@ -107,6 +107,13 @@
           "description": "Total area of the land parcel (e.g., in acres, hectares).",
           "title": "Land Area",
           "type": "number"
+        },
+        "name_match_percentage": {
+          "description": "Percentage indicating the match between provided name and PAN name (0-100)",
+          "title": "Name Match Percentage",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10000
         }
       },
       "required": [
@@ -126,7 +133,8 @@
         "irrigation_status",
         "mortgage_status",
         "court_case",
-        "land_area"
+        "land_area",
+        "name_match_percentage"
       ],
       "type": "object"
     },

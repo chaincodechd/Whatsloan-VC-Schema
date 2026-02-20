@@ -109,3 +109,11 @@ This document describes the Voter ID schema used for farmer identification and v
 ```json
 "state": "Uttar Pradesh"
 ```
+
+## name_match_percentage
+
+`name_match_percentage` indicates the percentage match between a provided name and the name on the PAN card.
+
+```json
+"name_match_percentage": 95
+```

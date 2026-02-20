@@ -50,6 +50,13 @@
           "description": "Full address as a plain string text",
           "title": "Address",
           "type": "string"
+        },
+        "name_match_percentage": {
+          "description": "Percentage indicating the match between provided name and PAN name (0-100)",
+          "title": "Name Match Percentage",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10000
         }
       },
       "required": [
@@ -58,7 +65,8 @@
         "gender",
         "father_or_husband_name",
         "date_of_birth",
-        "address"
+        "address",
+        "name_match_percentage"
       ],
       "type": "object"
     },

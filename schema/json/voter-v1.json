@@ -85,6 +85,13 @@
           "description": "State as per Voter ID records",
           "title": "State",
           "type": "string"
+        },
+        "name_match_percentage": {
+          "description": "Percentage indicating the match between provided name and PAN name (0-100)",
+          "title": "Name Match Percentage",
+          "type": "number",
+          "minimum": 0,
+          "maximum": 10000
         }
       },
       "required": [
@@ -100,7 +107,8 @@
         "police_station",
         "constituency",
         "district",
-        "state"
+        "state",
+        "name_match_percentage"
       ],
       "type": "object"
     },

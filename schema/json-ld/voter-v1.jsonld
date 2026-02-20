@@ -62,6 +62,10 @@
           "state": {
             "@id": "voter-vocab:state",
             "@type": "xsd:string"
+          },
+          "name_match_percentage": {
+            "@id": "voter-vocab:name_match_percentage",
+            "@type": "xsd:integer"
           }
         },
         "@id": "https://raw.githubusercontent.com/chaincodechd/Whatsloan-VC-Schema/refs/heads/main/schema/json-ld/voter-v1.jsonld#Voter"
